@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Phone, ChevronDown, Home as HomeIcon, Building, ClipboardList } from "lucide-react";
+import { SITE, assetPath } from "@/lib/site-data";
 import ScrollReveal from "@/components/ScrollReveal";
 import StatCounter from "@/components/StatCounter";
 import GoldDivider from "@/components/GoldDivider";
 import ServiceCard from "@/components/ServiceCard";
-import { SITE } from "@/lib/site-data";
 
 const establishDate = new Date(2025, 2, 14); // March 14, 2025
 const now = new Date();
@@ -207,7 +207,7 @@ export default function Home() {
             <ScrollReveal key={src} delay={i * 0.08}>
               <div className="group relative overflow-hidden rounded-sm border border-border-gold">
                 <Image
-                  src={`/imgs/${encodeURIComponent(src)}`}
+                  src={assetPath(`/imgs/${encodeURIComponent(src)}`)}
                   alt={`Gallery preview ${i + 1}`}
                   width={400}
                   height={300}

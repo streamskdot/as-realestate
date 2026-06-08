@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
-import { NAV } from "@/lib/site-data";
+import { NAV, assetPath } from "@/lib/site-data";
 import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header() {
@@ -36,7 +36,7 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link href="/" aria-label="株式会社AS ホーム" className="relative z-50">
           <Image
-            src="/logo.jpeg"
+            src={assetPath("/logo.jpeg")}
             alt="株式会社AS ロゴ"
             width={112}
             height={112}

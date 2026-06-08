@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { assetPath } from "@/lib/site-data";
 import PageHero from "@/components/PageHero";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -47,7 +48,7 @@ export default function GalleryPage() {
             <ScrollReveal key={src} delay={i * 0.06}>
               <div className="group relative mb-5 overflow-hidden rounded-sm border border-border-gold bg-bg-card">
                 <Image
-                  src={`/imgs/${encodeURIComponent(src)}`}
+                  src={assetPath(`/imgs/${encodeURIComponent(src)}`)}
                   alt={`Gallery image ${i + 1}`}
                   width={800}
                   height={600}

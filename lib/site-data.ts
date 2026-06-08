@@ -2,6 +2,8 @@
 // NOTE: All phone numbers, addresses, license numbers and listings below are
 // FICTIONAL placeholder/dummy data for demonstration purposes only.
 
+export const BASE_PATH = "/as-realestate";
+
 export const SITE = {
   nameJa: "株式会社AS",
   nameEn: "Kabushiki Kaisha AS",
@@ -14,6 +16,10 @@ export const SITE = {
   address: "東京都新宿区新宿7-27-16-103",
   ceo: "Thapa Ashok",
 };
+
+export function assetPath(path: string) {
+  return `${BASE_PATH}${path}`;
+}
 
 export type NavItem = {
   labelJa: string;

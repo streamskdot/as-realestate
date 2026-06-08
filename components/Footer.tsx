@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Share2, AtSign, MessageCircle, Globe, ArrowUp } from "lucide-react";
-import { SITE } from "@/lib/site-data";
+import { SITE, assetPath } from "@/lib/site-data";
 
 const quickLinks = [
   { label: "サービス案内", href: "/service" },
@@ -27,7 +27,7 @@ export default function Footer() {
         {/* Address */}
         <div>
           <Image
-            src="/logo.jpeg"
+            src={assetPath("/logo.jpeg")}
             alt="株式会社AS ロゴ"
             width={128}
             height={128}
