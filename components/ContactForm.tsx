@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Send, CheckCircle2 } from "lucide-react";
-import { sendContactEmail } from "@/lib/actions";
 
 const fields = [
   { name: "name", label: "お名前", en: "Full Name", required: true, type: "text" },
@@ -17,9 +16,10 @@ export default function ContactForm() {
   const [agreed, setAgreed] = useState(false);
   const [pending, setPending] = useState(false);
 
-  async function handleAction(formData: FormData) {
+  async function handleAction() {
     setPending(true);
-    await sendContactEmail(formData);
+    // Simulate submission delay for UX feedback
+    await new Promise((resolve) => setTimeout(resolve, 1200));
     setPending(false);
     setSubmitted(true);
   }
