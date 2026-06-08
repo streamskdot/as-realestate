@@ -5,7 +5,7 @@
 export const SITE = {
   nameJa: "株式会社AS",
   nameEn: "Kabushiki Kaisha AS",
-  url: "https://as-realestate.jp",
+  url: "https://streamskdot.github.io/as-realestate",
   tel: "03-6205-5836",
   telIntl: "+81-3-6205-5836",
   fax: "",
